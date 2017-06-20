@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Autoprefixer is a tool to parse CSS and add vendor prefixes to CSS rules.
 gem 'autoprefixer-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby, group: :production
 
 # Web-Page content manage for Rails, based on separated content pieces (blocks)
 gem 'vitrage', github: 'dymio/vitrage', ref: '4e825cd756e1d05cbf932f483d1a533b68fa76ff'
