@@ -16,6 +16,11 @@ gem 'autoprefixer-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Web-Page content manage for Rails, based on separated content pieces (blocks)
+gem 'vitrage', github: 'dymio/vitrage', ref: '4e825cd756e1d05cbf932f483d1a533b68fa76ff'
+
+gem 'remotipart', '>=1.2.1'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

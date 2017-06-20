@@ -1,0 +1,12 @@
+<%= semantic_form_for piece, url: form_url, method: form_method, remote: true do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :body, input_html: { rows: 4 } %>
+  <% end -%>
+  <%= hidden_field_tag :kind, piece.class.name.demodulize, id: nil %>
+  <%= hidden_field_tag :owner_type, params[:owner_type], id: nil %>
+  <%= hidden_field_tag :owner_id, params[:owner_id], id: nil %>
+  <%= f.actions do %>
+    <%= f.action :submit, as: :button %>
+    <%= f.action :cancel, as: :link %>
+  <% end -%>
+<% end -%>

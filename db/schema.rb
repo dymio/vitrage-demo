@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620070615) do
+ActiveRecord::Schema.define(version: 20170620080552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,5 +24,25 @@ ActiveRecord::Schema.define(version: 20170620070615) do
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree
+
+  create_table "vitrage_owners_pieces_slots", force: :cascade do |t|
+    t.integer  "owner_id",               null: false
+    t.string   "owner_type",             null: false
+    t.integer  "piece_id"
+    t.string   "piece_type"
+    t.integer  "ordn",       default: 9, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "vitrage_owners_pieces_slots", ["ordn"], name: "index_vitrage_owners_pieces_slots_on_ordn", using: :btree
+  add_index "vitrage_owners_pieces_slots", ["owner_type", "owner_id"], name: "index_vitrage_owners_pieces_slots_on_owner_type_and_owner_id", using: :btree
+  add_index "vitrage_owners_pieces_slots", ["piece_type", "piece_id"], name: "index_vitrage_owners_pieces_slots_on_piece_type_and_piece_id", using: :btree
+
+  create_table "vtrg_texts", force: :cascade do |t|
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
