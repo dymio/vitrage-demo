@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.new
+    @page = Page.new(uip: request.remote_ip)
 
     if @page.save
       redirect_to page_path(@page.slug)
