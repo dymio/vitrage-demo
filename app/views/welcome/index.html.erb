@@ -1,13 +1,22 @@
-<h1>Vitrage demo</h1>
-<p>
-  Vitrage is web-page content management system for Rails, based on separated content pieces.
-  <a href="https://github.com/dymio/vitrage">Github page</a> of the project.
-</p>
-<p>
-  Use button below to get your personal page to try Vitrage.
-  Every page has uniq url and visible to anyone who knows it.
-</p>
-<%= form_tag pages_path do %>
-  <%= submit_tag "Create page" %>
-<% end %>
-<p>&nbsp;</p>
+<div class="holder content">
+  <h1 class="centered">Vitrage demonstration project</h1>
+  <div class="welcome-container">
+    <div>
+      <p>
+        Vitrage is&nbsp;web-page content management system for&nbsp;Rails, based on&nbsp;separated content pieces.
+      </p>
+      <p>
+        There&nbsp;is&nbsp;<a href="https://github.com/dymio/vitrage">Github page</a> of&nbsp;the&nbsp;project.
+      </p>
+    </div>
+    <div>
+      <p>
+        Use button below to&nbsp;get your personal page to&nbsp;try Vitrage.
+        Every page has unique url and&nbsp;visible to&nbsp;anyone who knows&nbsp;it.
+      </p>
+      <%= form_tag pages_path, class: 'create-new-page-form' do %>
+        <%= submit_tag "Create new page" %>
+      <% end %>
+    </div>
+  </div>
+</div>

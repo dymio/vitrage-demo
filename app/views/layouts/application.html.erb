@@ -14,6 +14,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="mjrh">
+    <div class="holder">
+      <%= link_to image_tag('vitrage_logo.png', width: 140), root_url %>
+      <% if @page %>
+        <nav class="page-nav">
+          <% if params[:action] == 'show' %><a href="<%= edit_page_path(@page.slug) %>">Page's edit mode</a><% end %>
+          <% if params[:action] == 'edit' %><a href="<%= page_path(@page.slug) %>">Page's show mode</a><% end %>
+        </nav>
+      <% end %>
+    </div>
+  </header>
   <%= yield %>
   <%= javascript_include_tag 'application' %>
 </body>
