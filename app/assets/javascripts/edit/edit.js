@@ -11,13 +11,6 @@
 //= require edit/trumbowyg_initializer
 //= require vitrage/vitrage
 
-// // adding of new nested object
-// function add_fields(link, association, content) {
-//   var new_id = new Date().getTime();
-//   var regexp = new RegExp("new_" + association, "g")
-//   $(link).before(content.replace(regexp, new_id));
-// }
-
 $(document).ready(function() {
   // Vitrage event listeners
   if ((event_provider = $(".vtrg-add-new-wrapper")).length) {
@@ -36,3 +29,10 @@ $(document).ready(function() {
     });
   }
 });
+
+// adding of new nested object
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).before(content.replace(regexp, new_id));
+}

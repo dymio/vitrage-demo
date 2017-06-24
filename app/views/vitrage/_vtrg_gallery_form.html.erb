@@ -1,0 +1,15 @@
+<%= semantic_form_for piece, url: form_url, method: form_method, multipart: true, remote: true do |f| %>
+  <%= f.inputs do %>
+    <%= f.semantic_fields_for :items do |a| %>
+      <%= render partial: "vitrage/gallery_item_fields", locals: { f: a } %>
+    <% end %>
+    <%= link_to_add_fields "Add new item", f, :items %>
+  <% end -%>
+  <%= hidden_field_tag :kind, piece.class.name.demodulize, id: nil %>
+  <%= hidden_field_tag :owner_type, params[:owner_type], id: nil %>
+  <%= hidden_field_tag :owner_id, params[:owner_id], id: nil %>
+  <%= f.actions do %>
+    <%= f.action :submit, as: :button %>
+    <%= f.action :cancel, as: :link %>
+  <% end -%>
+<% end -%>

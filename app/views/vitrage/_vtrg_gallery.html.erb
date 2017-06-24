@@ -1,0 +1,7 @@
+<div class="cnt-block-gallery holder">
+  <% piece.items.ordered.each do |item| %>
+    <%= link_to item.image.url, title: item.caption, :class => 'gallery-item' do %>
+      <%= image_tag item.image.thumb.url, alt: item.alt, size: '120x120' %>
+    <% end %>
+  <% end %>
+</div>

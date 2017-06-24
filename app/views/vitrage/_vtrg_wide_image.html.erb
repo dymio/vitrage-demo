@@ -1,0 +1,6 @@
+<div class="cnt-block-wide-image">
+  <%= image_tag piece.image.url, alt: piece.alt %>
+  <% if piece.caption.present? %>
+    <p><%= piece.caption %></p>
+  <% end %>
+</div>

@@ -8,7 +8,8 @@ class VitrageOwnersPiecesSlot < ActiveRecord::Base
 
   default_scope -> { order(ordn: :asc, id: :asc) }
 
-  PIECE_CLASSES_STRINGS = [ "VtrgText" ] # add pieces class names strings here (demodulized)
+  # add pieces class names strings here (demodulized)
+  PIECE_CLASSES_STRINGS = [ "VtrgText", "VtrgWideImage", "VtrgGallery" ]
 
   private
 

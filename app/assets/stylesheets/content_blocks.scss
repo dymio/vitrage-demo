@@ -1,0 +1,20 @@
+// .cnt-block-text {}
+
+.cnt-block-wide-image {
+  text-align: center;
+  img { vertical-align: top; max-width: 100%; }
+  p {
+    font-size: 11px;
+    color: #343434;
+  }
+}
+
+.cnt-block-gallery {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  .gallery-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px;
+  }
+}
