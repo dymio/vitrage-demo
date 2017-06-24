@@ -1,7 +1,7 @@
 <div class="holder">
   <%= semantic_form_for piece, url: form_url, method: form_method, remote: true do |f| %>
     <%= f.inputs do %>
-      <%= f.input :body, input_html: { rows: 4 } %>
+      <%= f.input :body, input_html: { rows: 4, :class => 'editor' } %>
     <% end -%>
     <%= hidden_field_tag :kind, piece.class.name.demodulize, id: nil %>
     <%= hidden_field_tag :owner_type, params[:owner_type], id: nil %>

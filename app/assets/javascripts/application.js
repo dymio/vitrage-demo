@@ -12,6 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.remotipart
-//= require vitrage/vitrage
-//= require_tree .
+// do not require_tree .

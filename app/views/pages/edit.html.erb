@@ -1,1 +1,4 @@
+<% content_for :more_stylesheets do %><%= stylesheet_link_tag 'edit/edit', media: 'all' %><% end %>
+<% content_for :more_javascript do %><%= javascript_include_tag 'edit/edit' %><% end %>
+
 <%= edit_vitrage_for @page %>

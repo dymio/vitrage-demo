@@ -1,0 +1,23 @@
+$.trumbowyg.svgPath = '<%= asset_path("trumbowyg_icons.svg") %>';
+
+function initWYSIWYGeditor(jqWrapperEl) {
+  jqWrapperEl.find('.editor').trumbowyg({
+    resetCss: true,
+    removeformatPasted: false,
+    autogrow: false,
+    btns: [
+        ['viewHTML'],
+        ['formatting'],
+        'btnGrp-semantic',
+        ['superscript', 'subscript'],
+        ['link'],
+        ['insertImage', 'noembed'],
+        'btnGrp-justify',
+        'btnGrp-lists',
+        ['table'],
+        ['horizontalRule'],
+        ['removeformat'],
+        ['fullscreen']
+    ]
+  });
+}
