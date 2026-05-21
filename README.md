@@ -1,11 +1,14 @@
 Vitrage Demo
 ============
 
+> [!WARNING]
+> This project has been archived and is no longer supported.
+
 This is Ruby on Rails application made for trying
 [Vitrage](https://github.com/dymio/vitrage) — web-page content management system
 for Rails, based on separated content pieces.
 
-Project works at [vitrage-demo.codenohito.ru](http://vitrage-demo.codenohito.ru/)
+Project works at [vitrage-demo.dymio.net](http://vitrage-demo.dymio.net/)
 
 
 Getting Started
