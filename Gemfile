@@ -17,7 +17,7 @@ gem 'autoprefixer-rails'
 gem 'therubyracer', platforms: :ruby, group: :production
 
 # Web-Page content manage for Rails, based on separated content pieces (blocks)
-gem 'vitrage', github: 'dymio/vitrage', ref: '4e825cd756e1d05cbf932f483d1a533b68fa76ff'
+gem 'vitrage', '0.0.4'
 
 gem 'remotipart', '>=1.2.1'
 
