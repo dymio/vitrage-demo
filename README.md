@@ -34,6 +34,9 @@ File example:
 
 There is `config/database_example.yml` file for full example.
 
+Create file `config/application.yml` for app configuration management.
+There is `config/application_example.yml` for example.
+
 When done, run:
 
     $ bin/bundle install --without production
